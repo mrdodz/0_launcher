@@ -35,7 +35,7 @@
           "from": {
             "simultaneous": [
               {
-                "key_code": "o"
+                "key_code": "0"
               },
               {
                 "key_code": "a"
@@ -80,6 +80,79 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": [
+
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Google Chrome.app'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "launcher_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "0"
+              },
+              {
+                "key_code": "b"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "launcher_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "mandatory": [
+
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "launcher_mode",
+                "value": 1
+              }
+            },
+            {
+              "shell_command": "open -a 'Google Chrome.app'"
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
             "key_code": "c",
             "modifiers": {
               "mandatory": [
@@ -108,7 +181,7 @@
           "from": {
             "simultaneous": [
               {
-                "key_code": "o"
+                "key_code": "0"
               },
               {
                 "key_code": "c"
@@ -153,6 +226,79 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": [
+
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Finder.app'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "launcher_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "0"
+              },
+              {
+                "key_code": "f"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "launcher_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "mandatory": [
+
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "launcher_mode",
+                "value": 1
+              }
+            },
+            {
+              "shell_command": "open -a 'Finder.app'"
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
             "key_code": "i",
             "modifiers": {
               "mandatory": [
@@ -181,7 +327,7 @@
           "from": {
             "simultaneous": [
               {
-                "key_code": "o"
+                "key_code": "0"
               },
               {
                 "key_code": "i"
@@ -226,7 +372,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "b",
+            "key_code": "k",
             "modifiers": {
               "mandatory": [
 
@@ -238,7 +384,7 @@
           },
           "to": [
             {
-              "shell_command": "open -a 'fixBluetooth.app'"
+              "shell_command": "open -a 'KeePassXC.app'"
             }
           ],
           "conditions": [
@@ -254,10 +400,10 @@
           "from": {
             "simultaneous": [
               {
-                "key_code": "o"
+                "key_code": "0"
               },
               {
-                "key_code": "b"
+                "key_code": "k"
               }
             ],
             "simultaneous_options": {
@@ -289,80 +435,7 @@
               }
             },
             {
-              "shell_command": "open -a 'fixBluetooth.app'"
-            }
-          ],
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 500
-          }
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "m",
-            "modifiers": {
-              "mandatory": [
-
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "open -a 'MacPass.app'"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "launcher_mode",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "simultaneous": [
-              {
-                "key_code": "o"
-              },
-              {
-                "key_code": "m"
-              }
-            ],
-            "simultaneous_options": {
-              "key_down_order": "strict",
-              "key_up_order": "strict_inverse",
-              "to_after_key_up": [
-                {
-                  "set_variable": {
-                    "name": "launcher_mode",
-                    "value": 0
-                  }
-                }
-              ]
-            },
-            "modifiers": {
-              "mandatory": [
-
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "launcher_mode",
-                "value": 1
-              }
-            },
-            {
-              "shell_command": "open -a 'MacPass.app'"
+              "shell_command": "open -a 'KeePassXC.app'"
             }
           ],
           "parameters": {
@@ -400,7 +473,7 @@
           "from": {
             "simultaneous": [
               {
-                "key_code": "o"
+                "key_code": "0"
               },
               {
                 "key_code": "p"
@@ -473,7 +546,7 @@
           "from": {
             "simultaneous": [
               {
-                "key_code": "o"
+                "key_code": "0"
               },
               {
                 "key_code": "s"
@@ -509,6 +582,79 @@
             },
             {
               "shell_command": "open -a 'Slack.app'"
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 500
+          }
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": [
+
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Cisco AnyConnect Secure Mobility Client.app'"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "launcher_mode",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "simultaneous": [
+              {
+                "key_code": "0"
+              },
+              {
+                "key_code": "v"
+              }
+            ],
+            "simultaneous_options": {
+              "key_down_order": "strict",
+              "key_up_order": "strict_inverse",
+              "to_after_key_up": [
+                {
+                  "set_variable": {
+                    "name": "launcher_mode",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            "modifiers": {
+              "mandatory": [
+
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "launcher_mode",
+                "value": 1
+              }
+            },
+            {
+              "shell_command": "open -a 'Cisco AnyConnect Secure Mobility Client.app'"
             }
           ],
           "parameters": {
