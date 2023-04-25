@@ -7,7 +7,7 @@
 # $ ruby ./CreateLauncherModeTemplate.rb
 #
 # *i.e. --> ruby ./CreateLauncherModeTemplate.rb > ~/.config/karabiner/assets/complex_modifications/o_launcher.json
-# Then launch Karabiner and enable rule
+# Then launch Karabiner and enable rule under complex modifications
 
 # Parameters
 
@@ -31,12 +31,14 @@ def parameters
           'manipulators' => [
 
             generate_launcher_mode('a', [], [{ 'shell_command' => "open -a 'Activity Monitor.app'" }]),
+            generate_launcher_mode('b', [], [{ 'shell_command' => "open -a 'Google Chrome.app'" }]),
             generate_launcher_mode('c', [], [{ 'shell_command' => "open -a 'Visual Studio Code.app'" }]),
+            generate_launcher_mode('f', [], [{ 'shell_command' => "open -a 'Finder.app'" }]),
             generate_launcher_mode('i', [], [{ 'shell_command' => "open -a 'iTerm.app'" }]),
-            generate_launcher_mode('b', [], [{ 'shell_command' => "open -a 'fixBluetooth.app'" }]),
-            generate_launcher_mode('m', [], [{ 'shell_command' => "open -a 'MacPass.app'" }]),
+            generate_launcher_mode('k', [], [{ 'shell_command' => "open -a 'KeePassXC.app'" }]),
             generate_launcher_mode('p', [], [{ 'shell_command' => "open -a 'Opera.app'" }]),
             generate_launcher_mode('s', [], [{ 'shell_command' => "open -a 'Slack.app'" }]),
+            generate_launcher_mode('v', [], [{ 'shell_command' => "open -a 'Cisco AnyConnect Secure Mobility Client.app'" }]),
 
           ].flatten,
         },
